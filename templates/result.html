@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h3>The cyberbullying score for <span class='sentence'>&#8220;{{sentence}}&#8221;</span> is {{result}}</h3>
+    </div>
+</body>
+<style>
+    body,html{
+        margin:0;
+        padding:0;
+        height:100vh;
+        background:rgb(16, 69, 78);
+        display:flex;
+        justify-content: center;
+        color:#fff;
+        font-family:Montserrat;
+    }
+    .container{margin-top:9vh;}
+    form label{display:block;}
+    form input[type='text']{
+        border-radius:5px;
+        border:none;
+        outline:none;
+        padding:10px 7px;
+        font-family:Montserrat;
+    }
+    form input[type='submit']{
+        padding:10px 1rem;
+        background:rgb(21, 182, 168);
+        color:#fff;
+        border:none;
+        outline:none;
+        cursor:pointer;
+        border-radius:5px;
+    }
+    .sentence{
+        background:rgba(255, 255, 0, 0.493);
+        padding:0 3px;
+    }
+</style>
+</html>

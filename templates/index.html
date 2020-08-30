@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hello</title>
+</head>
+<body>
+    <div class="container">
+        <form action="{% url 'core:predict' %}" class="mlForm" method="POST">
+            {% csrf_token %}
+            <label for="sentence">Your sentence:</label>
+            <input type="text" name="sentence">
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</body>
+<style>
+    body,html{
+        margin:0;
+        padding:0;
+        height:100vh;
+        background:rgb(16, 69, 78);
+        display:flex;
+        justify-content: center;
+        color:#fff;
+        font-family:Montserrat;
+    }
+    .container{margin-top:9vh;}
+    form label{display:block;}
+    form input[type='text']{
+        border-radius:5px;
+        border:none;
+        outline:none;
+        padding:10px 7px;
+        font-family:Montserrat;
+    }
+    form input[type='submit']{
+        padding:10px 1rem;
+        background:rgb(21, 182, 168);
+        color:#fff;
+        border:none;
+        outline:none;
+        cursor:pointer;
+        border-radius:5px;
+    }
+</style>
+</html>
